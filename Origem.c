@@ -1,22 +1,18 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<locale.h>
+int main(void)
+{
+	setlocale(LC_ALL, "");
+	char temp;
+	float valor;
+	printf("Queres calcular de C para F ou ao contrário?(C/F)");
+	scanf_s("%c", &temp);
+	printf("Diz a temperatura");
+	scanf_s("%f", &valor);
+	if (temp == "C" || temp == "C")
+		printf("A temperatura em F é: %.1f",(valor * 9/ 5) + 32);
+	else
+		printf("A temperatura em Celcius é: %.1f",(valor - 32)*5/9);
 
-int main() {
-	int num1, num2, num3;
-	printf("diz o primeiro número");
-	scanf_s("%d" "núm1");
-	printf("diz o segundo número");
-	scanf_s("%d" "núm2");
-	printf("diz o terceiro número");
-	scanf_s("%d" "núm3");
-
-	if ("num1>num2 && num1>num3"); {
-		printf("O maior numero e: %d\n", num1);
-	}
-	else if ("num2 >= num1 && num2 >= num3") {
-		printf("O maior numero e: %d\n", num2);
-	}
-	else {
-		printf("O maior numero e: %d\n", num3);
-	}
-
+	return 0;
 }
